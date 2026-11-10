@@ -41,7 +41,7 @@ header#header.widen .header-inner{border-radius:0;padding-inline:var(--pad);heig
 .logo{display:flex;align-items:center;gap:.8rem;color:var(--blue);font-style:italic;white-space:nowrap}
 .logo b{font-weight:800;font-size:3.2rem;letter-spacing:-.08rem;line-height:1}
 .logo small{font-style:normal;font-size:1.05rem;font-weight:700;letter-spacing:.24rem;color:var(--mute2)}
-.logo i{font-style:normal;font-size:1.15rem;font-weight:800;letter-spacing:.08rem;color:var(--white);background:var(--navy);padding:.4rem .9rem;border-radius:99rem}
+.logo i{font-style:normal;font-size:2rem;font-weight:800;letter-spacing:.04rem;color:var(--white);background:var(--navy);padding:.5rem 1.4rem;border-radius:99rem;line-height:1.2}
 .gnb{margin-left:6rem}
 .gnb ul{display:flex;gap:2rem}
 .gnb a{display:block;padding:2.15rem 2rem;border-radius:2rem;font-size:1.8rem;font-weight:500;transition:background .2s}
@@ -85,9 +85,7 @@ section{margin-bottom:20rem}
 .stage{position:absolute;left:0;top:0;width:184rem;height:80.2rem;transform-origin:0 0;transform:scale(var(--hs,1))}
 .hero-shape{position:absolute;inset:0;overflow:hidden;
   clip-path:path('M56,0 H1784 A56,56 0 0 1 1840,56 V600 A56,56 0 0 1 1784,656 H1340 C1298,656 1272,670 1252,700 L1196,778 C1182,794 1164,802 1142,802 H56 A56,56 0 0 1 0,746 V56 A56,56 0 0 1 56,0 Z');
-  background:
-    linear-gradient(112deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.14) 54%,rgba(255,255,255,0) 68%),
-    linear-gradient(105deg,#2f5bff 0%,#4a74ff 42%,#7fa4ff 78%,#a4c2ff 100%)}
+  background:linear-gradient(105deg,#2753f5 0%,#2f5bff 45%,#4a73ff 100%)}
 .banner-contents{position:absolute;left:calc(280 / 1840 * 100%);top:25rem;z-index:2;color:var(--white)}
 .banner-contents .desc{font-size:3.2rem;font-weight:300;line-height:1.3;margin-bottom:1.2rem;letter-spacing:-.064rem}
 .banner-contents .tit{font-size:5.6rem;font-weight:700;line-height:1.3;letter-spacing:-.112rem}
@@ -99,7 +97,8 @@ section{margin-bottom:20rem}
 .banner-contents .btn.w{background:var(--white);color:var(--navy)}
 /* 제품 조합: 피그마 '복지몰 소개' 슬라이드의 실제 비율(냉장고 350 : 세탁기 199 : 로봇청소기 130) */
 .art{position:absolute;right:20rem;bottom:17.6rem;width:51.5rem;height:54rem;z-index:1}
-.art::before{content:"";position:absolute;left:-6%;right:-6%;bottom:-1.8rem;height:4.4rem;background:radial-gradient(ellipse at center,rgba(3,10,40,.55) 0,rgba(3,10,40,0) 70%);filter:blur(.8rem);z-index:0}
+.art::before{content:"";position:absolute;left:-8%;right:-8%;bottom:-2.2rem;height:5.6rem;background:radial-gradient(ellipse at center,rgba(3,10,40,.6) 0,rgba(3,10,40,.28) 42%,rgba(3,10,40,0) 72%);filter:blur(.7rem);z-index:0}
+.hero-shape .art{bottom:23rem;right:21rem;transform:scale(.86);transform-origin:50% 100%}
 .art img{position:absolute;bottom:0;width:auto;max-width:none;image-rendering:auto}
 .art .fr{filter:drop-shadow(0 1.4rem 2.2rem rgba(3,10,40,.32))}
 .art .ro{filter:drop-shadow(-.6rem 1rem 1.6rem rgba(3,10,40,.5))}
@@ -179,12 +178,15 @@ section{margin-bottom:20rem}
 .callout .num{display:flex;align-items:baseline;gap:1rem}
 .callout .num b{font-size:14rem;font-weight:700;line-height:1;letter-spacing:-.6rem}
 .callout .num span{font-size:2.4rem;font-weight:500;opacity:.85}
+.callout .num span small{display:block;font-size:1.5rem;font-weight:500;opacity:.75;margin-top:.2rem}
 .sub-label{margin:7.2rem 0 2.4rem;font-size:2.8rem;font-weight:700;display:flex;align-items:baseline;gap:1.4rem}
 .sub-label small{font-size:1.6rem;font-weight:400;color:var(--mute)}
 .logo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.6rem}
-.lcard{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;height:19rem;border:1px solid var(--line);border-radius:2.4rem;background:var(--white);transition:border-color .25s,transform .25s}
+.lcard{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;height:16rem;border:1px solid var(--line);border-radius:2.4rem;background:var(--white);transition:border-color .25s,transform .25s}
 .lcard:hover{border-color:var(--blue);transform:translateY(-.4rem)}
-.lcard .lg{display:block;width:78%;height:var(--h,3rem);background:var(--navy);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+.lcard .lgi{display:block;width:var(--w,55%);height:auto;max-height:9rem}
+.lcard .lgi.r{border-radius:.8rem}
+.lcard .lg{display:block;width:70%;height:var(--h,3rem);background:var(--navy);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
 .lcard .st{display:flex;align-items:center;gap:.6rem;font-size:1.3rem;font-weight:600;color:var(--blue)}
 .lcard .st::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:currentColor}
 .lcard.soon .lg{opacity:.4}
@@ -239,6 +241,23 @@ section{margin-bottom:20rem}
 .box.price::after{content:"";position:absolute;inset:0;background:rgba(7,26,82,.25);pointer-events:none}
 .box.price>*{position:relative;z-index:1}
 .box.price .lb{font-size:1.8rem;font-weight:600;opacity:.75}
+.box.price .pro-head{margin-top:3.6rem}
+.box.price .pro-tags{margin-top:auto;padding-top:4rem;display:flex;flex-wrap:wrap;gap:1rem}
+.box.price .pro-tags li{padding:1.1rem 2rem;border-radius:5rem;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);font-size:1.6rem;font-weight:600}
+.box.price .pro-head .h{font-size:5.6rem;font-weight:300;line-height:1.28;letter-spacing:-.15rem}
+.box.price .pro-head .h strong{font-weight:800}
+.box.price .pro-head .s{margin-top:2.4rem;font-size:1.8rem;line-height:1.65;opacity:.85;max-width:40rem}
+.box.price .pro-head .s em{font-style:normal;opacity:.65;margin-left:.8rem;font-size:1.5rem}
+.box.price .eq{margin-top:2.8rem;display:flex;align-items:center;gap:1.4rem}
+.box.price .eqi{flex:1;padding:1.8rem 2.2rem;border-radius:2rem;background:rgba(255,255,255,.14)}
+.box.price .eqi.hi{background:var(--blue);box-shadow:0 0 0 1px rgba(255,255,255,.35) inset}
+.box.price .eqi small{display:block;font-size:1.4rem;font-weight:500;opacity:.8}
+.box.price .eqi b{display:block;margin-top:.4rem;font-size:3rem;font-weight:700;letter-spacing:-.07rem}
+.box.price .op{font-size:3.2rem;font-weight:300;opacity:.7}
+.box.price .sumline{margin-top:2.4rem;display:flex;align-items:baseline;gap:1.4rem;white-space:nowrap}
+.box.price .sumline b{font-size:8.8rem;font-weight:800;letter-spacing:-.4rem;line-height:1}
+.box.price .sumline b span{font-size:3.6rem;font-weight:700;letter-spacing:-.1rem;margin-left:.4rem}
+.box.price .sumline em{font-style:normal;font-size:1.6rem;font-weight:600;opacity:.75}
 .box.price .was{margin-top:3.2rem;font-size:3.2rem;font-weight:600;letter-spacing:-.08rem;opacity:.5;text-decoration:line-through;text-decoration-thickness:.2rem}
 .box.price .now{margin-top:.4rem;display:flex;align-items:flex-end;gap:.4rem;line-height:1}
 .box.price .now b{font-size:15rem;font-weight:800;letter-spacing:-.6rem;line-height:.9}
@@ -283,7 +302,8 @@ input[type=range]::-moz-range-thumb{width:2.2rem;height:2.2rem;border-radius:50%
 .res{background:var(--white);border-radius:3.2rem;padding:1.2rem 3.2rem}
 .res div{display:flex;justify-content:space-between;align-items:center;padding:1.8rem 0;font-size:1.8rem;color:var(--mute)}
 .res div+div{border-top:1px solid var(--line)}
-.res b{font-size:2.2rem;font-weight:700;color:var(--navy)}
+.res b{font-size:2.2rem;font-weight:700;color:var(--navy);white-space:nowrap}
+.res span small{display:block;margin-top:.3rem;font-size:1.3rem;color:var(--mute2)}
 .res .net b{font-size:3.6rem;letter-spacing:-.1rem;color:var(--blue)}
 .res .net b.neg{color:var(--navy);opacity:.55}
 .verdict{margin-top:1.6rem;font-size:1.6rem;line-height:1.6;color:var(--mute);min-height:5.2rem}
@@ -291,7 +311,7 @@ input[type=range]::-moz-range-thumb{width:2.2rem;height:2.2rem;border-radius:50%
 .eg div{border-radius:2.4rem;background:var(--paper);padding:2.4rem 3rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
 .eg small{display:block;font-size:1.4rem;color:var(--mute)}
 .eg b{font-size:2.6rem;font-weight:700}
-.eg span{font-size:1.5rem;font-weight:700;color:var(--blue);text-align:right}
+.eg span{font-size:1.6rem;font-weight:600;color:var(--blue);text-align:right;line-height:1.6;white-space:nowrap}
 
 /* ───── ⑦ partner ───── */
 .cs-info{display:grid;grid-template-columns:32rem 32rem 1fr;gap:1.6rem}
@@ -412,7 +432,7 @@ footer li::before{content:"·";position:absolute;left:0}
   :root{--pad:2rem}
   .header-inner{padding:1.2rem 2rem;height:7rem}
   .gnb{display:none}
-  .logo b{font-size:2.6rem}.logo small{display:none}
+  .logo b{font-size:2.6rem}.logo i{font-size:1.6rem;padding:.4rem 1.1rem}
   .util{display:none}
   .pill{height:4rem;padding:0 1.6rem;font-size:1.4rem}.pill svg{display:none}
   .marketing-box{aspect-ratio:auto;height:60rem}
@@ -439,7 +459,7 @@ footer li::before{content:"·";position:absolute;left:0}
   .reward-grid,.cs-info,.information-wrap{grid-template-columns:minmax(0,1fr);flex-direction:column}
   .reward{padding:3.2rem;min-height:0}.reward .ex div{flex-wrap:wrap;gap:.6rem}.reward h3{font-size:2.2rem}.reward .big{font-size:11rem}
   .cs-info .b3{grid-column:auto}
-  .box.price{padding:3.2rem;min-height:0}.box.price .now b{font-size:10rem}.box.price .now span{font-size:3.6rem}
+  .box.price{padding:3.2rem;min-height:0}.box.price .pro-head .h{font-size:3.8rem}
   .box.list,.box.calc,.apply-l,.apply-r{padding:3.2rem}
   .cmp-r .r{font-size:1.8rem;padding-left:6.2rem}
   .apply-l{min-height:0}.apply-l h3{font-size:3.6rem}
@@ -463,11 +483,11 @@ footer li::before{content:"·";position:absolute;left:0}
 </style>
 </head>
 <body>
-<div class="util"><a href="https://openm.co.kr" target="_blank" rel="noopener">오픈엑스 복지몰</a><a href="#apply">PRO 신청</a><a href="mailto:OPENXGROUP1@naver.com">문의하기</a></div>
+<div class="util"><a href="https://www.hellorent.co.kr/main" target="_blank" rel="noopener">헬로벨렌탈</a><a href="https://openm.co.kr" target="_blank" rel="noopener">오픈엑스 복지몰</a></div>
 
 <header id="header">
   <div class="header-inner">
-    <h1><a class="logo" href="#top" aria-label="헬로벨렌탈 PRO 홈"><b>HelloBell</b><small>RENTAL</small><i>PRO</i></a></h1>
+    <h1><a class="logo" href="#top" aria-label="헬로벨렌탈 PRO 홈"><b>HelloBell</b><i>PRO</i></a></h1>
     <nav class="gnb" aria-label="주요 메뉴"><ul>
       <li><a href="#s-existing">헬로벨렌탈</a></li>
       <li><a href="#s-welfare">오픈엑스 복지몰</a></li>
@@ -532,6 +552,7 @@ footer li::before{content:"·";position:absolute;left:0}
             <div class="mini"><em>3</em>상담은 본사가 대행</div>
             <div class="mini"><em>4</em>계약이 되면 수수료 지급</div>
           </div>
+          <p class="stat-note">월 이용료 10만원은 VAT 별도입니다.</p>
         </div>
         <span class="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
       </article></li>
@@ -598,17 +619,17 @@ footer li::before{content:"·";position:absolute;left:0}
     </ul>
   </div>
   <div class="callout reveal">
-    <div><p class="k">EMPLOYEE MALL</p><p class="t"><strong>오픈엑스 임직원몰</strong>로서<br>1년 12대까지 임직원 가격에 구매할 수 있어요.</p></div>
-    <div class="num"><b>12</b><span>대 / 년</span></div>
+    <div><p class="k">EMPLOYEE MALL</p><p class="t"><strong>오픈엑스 임직원몰</strong>로서<br>1년 기준 12대까지 임직원 가격에 구매할 수 있어요.</p></div>
+    <div class="num"><b>1</b><span>대 / 월<small>1년 기준</small></span></div>
   </div>
   <p class="sub-label reveal">입점 브랜드 <small>삼성전자부터 다양한 프리미엄 브랜드가 함께합니다</small></p>
   <ul class="logo-grid">
-    <li class="lcard reveal"><i class="lg" style="--m:url(assets/logos/samsung.svg);--h:3.6rem"></i><span class="st">입점 완료</span></li>
-    <li class="lcard reveal"><i class="lg" style="--m:url(assets/logos/nespresso.svg);--h:4.4rem"></i><span class="st">입점 완료</span></li>
-    <li class="lcard reveal"><i class="lg" style="--m:url(assets/logos/restonic.svg);--h:4.6rem"></i><span class="st">입점 완료</span></li>
-    <li class="lcard soon reveal"><i class="lg" style="--m:url(assets/logos/bodyfriend.svg);--h:3.6rem"></i><span class="st">입점 예정</span></li>
-    <li class="lcard soon reveal"><i class="lg" style="--m:url(assets/logos/lg.svg);--h:4.8rem"></i><span class="st">입점 예정</span></li>
-    <li class="lcard soon reveal"><i class="lg" style="--m:url(assets/logos/dyson.svg);--h:6.4rem"></i><span class="st">입점 예정</span></li>
+    <li class="lcard reveal"><img class="lgi" style="--w:74%" src="assets/logos/samsung-c.svg" alt="SAMSUNG"><span class="st">입점 완료</span></li>
+    <li class="lcard reveal"><img class="lgi" style="--w:72%" src="assets/logos/nespresso-c.svg" alt="NESPRESSO"><span class="st">입점 완료</span></li>
+    <li class="lcard reveal"><img class="lgi r" style="--w:66%" src="assets/logos/restonic-c.svg" alt="restonic"><span class="st">입점 완료</span></li>
+    <li class="lcard soon reveal"><i class="lg" style="--m:url(assets/logos/bodyfriend.svg);--h:2.6rem"></i><span class="st">입점 예정</span></li>
+    <li class="lcard soon reveal"><i class="lg" style="--m:url(assets/logos/lg.svg);--h:3.4rem"></i><span class="st">입점 예정</span></li>
+    <li class="lcard soon reveal"><i class="lg" style="--m:url(assets/logos/dyson.svg);--h:4.4rem"></i><span class="st">입점 예정</span></li>
   </ul>
 </section>
 
@@ -655,25 +676,19 @@ footer li::before{content:"·";position:absolute;left:0}
 
 <!-- ⑥ 10 → 15 -->
 <section id="s-compare">
-  <div class="title-wrap reveal"><div><h2 class="title">이 모든 혜택, <strong>월 5만원이면 됩니다</strong></h2><p class="lead">기존 월 10만원에 5만원만 더하세요. 복지몰에서 하나만 사도 본전입니다.</p></div></div>
+  <div class="title-wrap reveal"><div><h2 class="title">이 모든 혜택, <strong>월 5만원이면 됩니다</strong></h2><p class="lead">기존 헬로벨렌탈 월 10만원에 PRO 월 5만원을 더하면 월 15만원(VAT 별도). 복지몰에서 하나만 사도 그 5만원은 돌아옵니다.</p></div></div>
   <div class="compare-grid">
     <div class="box price reveal">
-      <p class="lb">월 이용료</p>
-      <p class="was">월 10만원</p>
-      <div class="now"><b>15</b><span>만원</span></div>
-      <span class="plus">+ 5만원 추가</span>
-      <div class="viz">
-        <p class="vt"><b>Neo QLED 85형</b> 한 대만 사도</p>
-        <div class="vrow"><span>PRO 추가 비용</span><b>50,000원</b></div>
-        <div class="vbar"><i style="width:14.5%"></i></div>
-        <div class="vrow hi"><span>받는 혜택 · 할인 267,000 + 환급 78,690</span><b>345,690원</b></div>
-        <div class="vbar b"><i style="width:100%"></i></div>
-        <p class="vfoot">공식가 2,890,000원 기준 · 복지몰가 2,623,000원</p>
+      <p class="lb">헬로벨렌탈 PRO</p>
+      <div class="pro-head">
+        <p class="h">기존 그대로,<br><strong>월 5만원</strong>만 더하면</p>
+        <p class="s">PRO 멤버가 되면 아래 혜택이 한 번에 열려요.</p>
       </div>
+      <ul class="pro-tags"><li>오픈엑스 복지몰 이용</li><li>정품 특가</li><li>구매 3% 환급</li><li>추천 3% 페이백</li><li>어린이재단 기부</li></ul>
     </div>
     <div class="box list reveal">
-      <div class="cmp-h"><div class="l">기존 · 월 10만원</div><div class="r">PRO 추가 · 월 +5만원</div></div>
-      <div class="cmp-r"><div class="l">최고 수준의 렌탈 수수료</div><div class="r">오픈엑스 복지몰 이용<small>임직원 가격 연 12대</small></div></div>
+      <div class="cmp-h"><div class="l">지금 받는 것 · 월 10만원</div><div class="r">PRO로 더 받는 것 · +5만원</div></div>
+      <div class="cmp-r"><div class="l">최고 수준의 렌탈 수수료</div><div class="r">오픈엑스 복지몰 이용<small>임직원 가격 월 1대 (1년 기준)</small></div></div>
       <div class="cmp-r"><div class="l">독립 홈페이지 제공</div><div class="r">복지몰 정품 특가</div></div>
       <div class="cmp-r"><div class="l">고객센터 100% 본사 지원</div><div class="r">내 구매 3% 환급</div></div>
       <div class="cmp-r"><div class="l">상담 대행 · 마케팅 지원</div><div class="r">지인 구매 3% 페이백</div></div>
@@ -684,24 +699,24 @@ footer li::before{content:"·";position:absolute;left:0}
   <div class="box calc reveal">
     <div>
       <h3>5만원, 얼마나 사면<br>본전일까요?</h3>
-      <p class="sub">복지몰 할인은 평균 20%, 환급은 결제액의 3%로 계산했어요.</p>
-      <div class="amt"><label for="rg">한 달 구매 금액 (공식가 기준)</label><b id="amt">100만원</b></div>
-      <input id="rg" type="range" min="0" max="5000000" step="100000" value="1000000" aria-label="한 달 구매 금액(공식가 기준)">
+      <p class="sub">복지몰 할인은 공식가 대비 평균 20%, 환급은 내 결제 금액의 3%로 계산했어요.</p>
+      <div class="amt"><label for="rg">한 달 복지몰 결제 금액</label><b id="amt">100만원</b></div>
+      <input id="rg" type="range" min="0" max="5000000" step="100000" value="1000000" aria-label="한 달 복지몰 결제 금액">
       <div class="scale"><span>0</span><span>250만원</span><span>500만원</span></div>
     </div>
     <div>
       <div class="res">
-        <div><span>복지몰 할인 (평균 20%)</span><b id="r0">+200,000원</b></div>
-        <div><span>구매 환급 (결제액의 3%)</span><b id="r1">+24,000원</b></div>
-        <div><span>PRO 추가 비용</span><b>−50,000원</b></div>
+        <div><span>복지몰 할인 (공식가 대비 20%)<small id="rs"></small></span><b id="r0">+250,000원</b></div>
+        <div><span>구매 환급 (내 결제액의 3%)</span><b id="r1">+30,000원</b></div>
+        <div><span>PRO 추가 비용 (VAT 별도)</span><b>−50,000원</b></div>
         <div class="net"><span>한 달 이득</span><b id="r3">+174,000원</b></div>
       </div>
       <p class="verdict" id="vd"></p>
     </div>
   </div>
   <div class="eg reveal">
-    <div><p><small>Neo QLED 85형 1대 · 할인 267,000 + 환급 78,690</small><b>345,690원</b></p><span>PRO 5만원의<br>6.9개월치</span></div>
-    <div><p><small>비스포크 AI 콤보 1대 · 할인 794,070 + 환급 93,330</small><b>887,400원</b></p><span>PRO 5만원의<br>17.7개월치</span></div>
+    <div><p><small>Neo QLED 85형 1대 구매 시 받는 혜택</small><b>345,690원</b></p><span>할인 267,000원<br>환급 78,690원</span></div>
+    <div><p><small>비스포크 AI 콤보 1대 구매 시 받는 혜택</small><b>887,400원</b></p><span>할인 794,070원<br>환급 93,330원</span></div>
   </div>
   <p class="note">복지몰 할인 평균 20%는 계산을 위한 가정이며 제품과 시점에 따라 다릅니다. 위 두 사례는 이 페이지 가격 비교의 실제 수치(공식가 대비)이고, 환급은 복지몰 결제액의 3%입니다.</p>
 </section>
@@ -727,8 +742,8 @@ footer li::before{content:"·";position:absolute;left:0}
     <div class="info-card news-info">
       <h3 class="title">PRO 혜택 한눈에</h3>
       <ul class="list">
-        <li><span class="key">월 이용료</span><span class="value hl">월 15만원 (기존 +5만원)</span></li>
-        <li><span class="key">오픈엑스 복지몰 이용</span><span class="value">임직원 가격 연 12대</span></li>
+        <li><span class="key">월 이용료</span><span class="value hl">월 15만원 · VAT 별도</span></li>
+        <li><span class="key">오픈엑스 복지몰 이용</span><span class="value">임직원 가격 월 1대 (1년 기준)</span></li>
         <li><span class="key">내 구매 환급</span><span class="value hl">3%</span></li>
         <li><span class="key">지인 구매 페이백</span><span class="value hl">3%</span></li>
         <li><span class="key">추천 리워드</span><span class="value">기간 제한 없음</span></li>
@@ -753,7 +768,7 @@ footer li::before{content:"·";position:absolute;left:0}
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>수익의 일정 비율 어린이재단 기부</li>
       </ul>
       <div class="priceline">
-        <div><small>헬로벨렌탈 PRO</small><b>월 15<span>만원</span></b></div>
+        <div><small>헬로벨렌탈 PRO · VAT 별도</small><b>월 15<span>만원</span></b></div>
         <div class="flow"><span>신청서</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg><span>승인</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg><span>이용</span></div>
       </div>
     </div>
@@ -785,12 +800,13 @@ footer li::before{content:"·";position:absolute;left:0}
 <footer>
   <div class="in">
     <div>
-      <div class="logo"><b>HelloBell</b><small>RENTAL</small><i>PRO</i></div>
+      <div class="logo"><b>HelloBell</b><i>PRO</i></div>
       <p>문의 · <a href="mailto:OPENXGROUP1@naver.com">OPENXGROUP1@naver.com</a> · <a href="https://openm.co.kr" target="_blank" rel="noopener">openm.co.kr</a></p>
       <p style="margin-top:1.2rem">© OPEN X · HelloBell RENTAL</p>
     </div>
     <ul>
       <li>복지몰 가격은 2026년 10월 기준이며 변동될 수 있습니다. 공식가는 삼성전자·네스프레소·레스토닉 출고가 기준입니다.</li>
+      <li>월 이용료(기존 월 10만원, PRO 추가 월 5만원)는 VAT 별도입니다.</li>
       <li>쿠팡가는 2026년 10월 기준 판매가입니다.</li>
       <li>환급·페이백은 정산을 통해 지급되며, 지급 조건은 이용 약관에 따릅니다.</li>
       <li>수익의 일정 비율이 푸른별 어린이재단에 기부됩니다.</li>
@@ -798,7 +814,7 @@ footer li::before{content:"·";position:absolute;left:0}
   </div>
 </footer>
 
-<a class="floating-banner" id="fbn" href="#apply"><em>월 +5만원</em>PRO 신청하기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="floating-banner" id="fbn" href="#apply"><em>월 +5만원 · VAT 별도</em>PRO 신청하기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
 
 <script>
 const SHEET_URL = '';   // 구글 시트(Apps Script 웹앱) 주소. 비어 있으면 신청 내용이 담긴 메일 작성 창이 열립니다
@@ -893,18 +909,22 @@ renderProd();
 
 /* calculator */
 const rg = $('#rg');
+/* 입력 = 내가 복지몰에서 결제하는 금액. 환급은 그 3%, 할인은 공식가(= 결제액 ÷ 0.8) 대비 20% */
 const DISC = 0.20, BACK = 0.03, PRO = 50000;
-const BREAK = Math.ceil(PRO / (DISC + (1 - DISC) * BACK) / 1000) * 1000;   // 공식가 기준 본전 금액
+const GAIN = 1 / (1 - DISC) - 1 + BACK;                        // 결제액 대비 혜택 비율 (할인 25% + 환급 3%)
+const BREAK = Math.ceil(PRO / GAIN / 10000) * 10000;            // 본전 결제 금액(만원 단위 올림) = 18만원
 function calc(){
-  const v = +rg.value, disc = Math.round(v * DISC), back = Math.round(v * (1 - DISC) * BACK), net = disc + back - PRO;
+  const v = +rg.value, official = Math.round(v / (1 - DISC)), disc = official - v, back = Math.round(v * BACK), net = disc + back - PRO;
   rg.style.setProperty('--p', (v / +rg.max * 100) + '%');
   $('#amt').textContent = (v / 10000).toLocaleString('ko-KR') + '만원';
+  $('#rs').textContent = `공식가 ${won(official)}원 → 내 결제 ${won(v)}원`;
   $('#r0').textContent = '+' + won(disc) + '원';
   $('#r1').textContent = '+' + won(back) + '원';
   const r3 = $('#r3'); r3.textContent = (net >= 0 ? '+' : '−') + won(Math.abs(net)) + '원'; r3.className = net >= 0 ? '' : 'neg';
+  const bm = BREAK / 10000, om = Math.round(BREAK / (1 - DISC) / 10000);
   $('#vd').textContent = v >= BREAK
-    ? `공식가 약 ${won(BREAK)}원어치만 사도 PRO 5만원이 회수돼요. 지금은 ${won(net)}원 이득입니다.`
-    : `공식가 약 ${won(BREAK)}원 이상 사면 PRO 5만원이 회수돼요. ${won(BREAK - v)}원어치만 더 사면 본전입니다.`;
+    ? `복지몰에서 약 ${bm}만원(공식가 약 ${om}만원)만 결제해도 PRO 5만원이 회수돼요. 지금은 ${won(net)}원 이득입니다.`
+    : `복지몰 결제가 약 ${bm}만원(공식가 약 ${om}만원)을 넘으면 PRO 5만원이 회수돼요. ${won(BREAK - v)}원만 더 결제하면 본전입니다.`;
 }
 rg.addEventListener('input', calc); calc();
 
@@ -916,6 +936,7 @@ const FAQ = [
   ['환급은 언제, 어떤 방식으로 받나요?', '환급과 페이백은 정산을 통해 지급됩니다. 정산 주기와 지급 방식은 신청 후 안내해 드립니다.'],
   ['추천 리워드는 정말 기간 제한이 없나요?', '추천코드 리워드는 기간 제한 없이 이어집니다.'],
   ['기부는 어떻게 이루어지나요?', '수익의 일정 비율이 푸른별 어린이재단에 기부됩니다.'],
+  ['월 이용료에 부가세가 포함되나요?', '월 이용료(기존 월 10만원, PRO 추가 월 5만원)는 VAT 별도입니다.'],
   ['해지하면 환불이 되나요?', '해지·환불 기준은 이용 약관에 따릅니다. 상담 시 자세히 안내해 드립니다.']
 ];
 $('#faq').innerHTML = FAQ.map(([q, a]) => `<li class="faq-i"><button class="faq-q" type="button">${q}</button><p class="faq-a">${a}</p></li>`).join('');
