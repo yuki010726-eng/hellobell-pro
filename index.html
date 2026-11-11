@@ -18,8 +18,8 @@
   --paper:#f3f6fc;
   --tint:#e9eeff;
   --line:rgba(7,26,82,.1);
-  --mute:rgba(7,26,82,.64);
-  --mute2:rgba(7,26,82,.42);
+  --mute:rgba(7,26,82,.72);
+  --mute2:rgba(7,26,82,.62);
   --pad:7.4rem;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -53,7 +53,7 @@ header#header.widen .header-inner{border-radius:0;padding-inline:var(--pad);heig
 
 /* ───── frame ───── */
 main{padding:0 2.4rem;background:var(--paper)}
-.main-inner{padding:0 1.6rem;background:var(--white);border-radius:0 0 5.6rem 5.6rem}
+.main-inner{padding:0 1.6rem 8rem;background:var(--white);border-radius:0 0 5.6rem 5.6rem}
 .main-inner section:not(.sec-key-content){max-width:128rem;margin-inline:auto}
 section{margin-bottom:20rem}
 .title-wrap{display:flex;align-items:center;justify-content:space-between;margin-bottom:5rem;gap:3rem}
@@ -180,7 +180,7 @@ section{margin-bottom:20rem}
 .callout .num b{font-size:14rem;font-weight:700;line-height:1;letter-spacing:-.6rem}
 .callout .num span{font-size:2.4rem;font-weight:500;opacity:.85}
 .callout .num span small{display:block;font-size:1.5rem;font-weight:500;opacity:.75;margin-top:.2rem}
-.sub-label{margin:7.2rem 0 2.4rem;font-size:2.8rem;font-weight:700;display:flex;align-items:baseline;gap:1.4rem}
+.sub-label{margin:4.4rem 0 2.4rem;font-size:2.8rem;font-weight:700;display:flex;align-items:baseline;gap:1.4rem}
 .sub-label small{font-size:1.6rem;font-weight:400;color:var(--mute)}
 .logo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.6rem}
 .lcard{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;height:16rem;border:1px solid var(--line);border-radius:2.4rem;background:var(--white);transition:border-color .25s,transform .25s}
@@ -220,19 +220,16 @@ section{margin-bottom:20rem}
 .reward-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.6rem}
 .reward{position:relative;min-height:40rem;padding:4.8rem;border-radius:4rem;display:flex;flex-direction:column;background:var(--paper)}
 .reward.b{background:var(--blue);color:var(--white)}
-.reward .k{font-size:1.8rem;font-weight:600;opacity:.62}
+.reward .k{font-size:1.8rem;font-weight:600;opacity:.8}
 .reward .big{margin-top:1.2rem;font-size:15rem;font-weight:700;line-height:1;letter-spacing:-.8rem;color:var(--blue)}
 .reward.b .big{color:var(--white)}
 .reward .big small{font-size:6.4rem;letter-spacing:-.2rem;margin-left:.6rem}
 .reward h3{margin-top:2.4rem;font-size:2.6rem;font-weight:700;line-height:1.35;letter-spacing:-.06rem;max-width:42rem}
 .reward .ex{margin-top:auto;padding-top:3.2rem}
 .reward .ex div{display:flex;justify-content:space-between;align-items:center;padding:2rem 2.4rem;border-radius:2rem;background:var(--white);font-size:1.6rem;color:var(--mute)}
-.reward.b .ex div{background:rgba(255,255,255,.16);color:rgba(255,255,255,.86)}
+.reward.b .ex div{background:rgba(255,255,255,.14);color:var(--white)}
 .reward .ex b{font-size:2.2rem;font-weight:700;color:var(--blue)}
 .reward.b .ex b{color:var(--white)}
-.strip{margin-top:1.6rem;display:flex;align-items:center;justify-content:center;gap:2.4rem;padding:2.4rem 3rem;border-radius:2.4rem;background:var(--tint);font-size:1.7rem;font-weight:600;flex-wrap:wrap}
-.strip i{width:1px;height:1.6rem;background:var(--line)}
-.strip span{color:var(--mute);font-weight:500}
 
 /* ───── ⑥ 10 → 15 ───── */
 .compare-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:1.6rem}
@@ -274,7 +271,7 @@ section{margin-bottom:20rem}
 .box.price .vbar i{display:block;height:100%;border-radius:99rem;background:var(--white)}
 .box.price .vbar.b i{background:var(--blue);box-shadow:0 0 0 1px rgba(255,255,255,.5) inset}
 .box.price .vfoot{font-size:1.3rem;opacity:.65;margin-top:-.8rem}
-.box.list{background:var(--paper);padding:4.4rem}
+.box.cmp{background:var(--paper);padding:4.4rem;display:flex;flex-direction:column;justify-content:center}
 .cmp-h,.cmp-r{display:grid;grid-template-columns:.8fr 1.2fr;gap:1rem}
 .cmp-h{margin-bottom:1rem}
 .cmp-h div{padding:1.5rem 2rem;border-radius:1.8rem;font-size:1.5rem;font-weight:700;text-align:center}
@@ -286,9 +283,8 @@ section{margin-bottom:20rem}
 .cmp-r .r{position:relative;background:var(--blue);color:var(--white);padding-left:7.4rem;font-size:2.2rem;font-weight:700;letter-spacing:-.04rem}
 .cmp-r .r::before{content:"+";position:absolute;left:2.2rem;top:50%;transform:translateY(-50%);width:3.6rem;height:3.6rem;border-radius:50%;background:var(--white);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:2.4rem;font-weight:700;line-height:1;padding-bottom:.2rem}
 .cmp-r .r small{font-size:1.4rem;font-weight:500;opacity:.8;margin-top:.3rem}
-.sum{margin-top:2.2rem;display:flex;align-items:center;justify-content:center;gap:1.4rem;font-size:2rem;font-weight:700}
-.sum span{padding:.9rem 2.2rem;border-radius:5rem;background:var(--white)}
-.sum span.g{background:var(--blue);color:var(--white)}
+.sum{margin-top:2.4rem;padding-top:2.4rem;border-top:1px solid var(--line);text-align:center;font-size:2.2rem;font-weight:600;letter-spacing:-.04rem}
+.sum strong{color:var(--blue);font-weight:800}
 .box.calc{margin-top:1.6rem;background:var(--tint);padding:5.6rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
 .calc h3{font-size:3.2rem;font-weight:700;line-height:1.35;letter-spacing:-.08rem}
 .calc .sub{margin-top:1rem;font-size:1.6rem;color:var(--mute)}
@@ -416,17 +412,46 @@ footer .f-info{margin-top:3.2rem;display:grid;gap:.8rem;font-size:1.5rem;line-he
 footer .f-info p{display:flex;flex-wrap:wrap;gap:.4rem 3rem}
 footer .f-info b{font-weight:600;color:rgba(255,255,255,.85)}
 footer .f-info a{color:inherit}
-footer .f-notes{margin-top:3.2rem;display:grid;gap:.6rem;font-size:1.3rem;color:rgba(255,255,255,.45);max-width:90rem}
+footer .f-notes{margin-top:3.2rem;display:grid;gap:.6rem;font-size:1.3rem;color:rgba(255,255,255,.66);max-width:90rem}
 footer .f-notes li{padding-left:1rem;position:relative;line-height:1.55}
 footer .f-notes li::before{content:"·";position:absolute;left:0}
-footer .copy{margin-top:3.6rem;font-size:1.4rem;color:rgba(255,255,255,.55)}
-#apply{margin-bottom:8rem}
+footer .copy{margin-top:3.6rem;font-size:1.4rem;color:rgba(255,255,255,.66)}
+#apply{margin-bottom:0}
 main{padding-bottom:2.4rem}
 .floating-banner{position:fixed;right:5rem;bottom:5rem;z-index:90;display:flex;align-items:center;gap:1.2rem;height:7.2rem;padding:0 3rem 0 3.4rem;border-radius:5rem;background:var(--navy);color:var(--white);font-size:1.8rem;font-weight:700;transform:translateY(16rem);transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .2s}
 .floating-banner.show{transform:none}
 .floating-banner:hover{opacity:.85}
 .floating-banner em{font-style:normal;font-size:1.4rem;font-weight:500;opacity:.7}
 .floating-banner svg{width:2.4rem;height:2.4rem}
+
+/* ───── polish: 브라우저 기본 표면·상태 정리 ───── */
+html{scroll-padding-top:10rem;scrollbar-color:rgba(7,26,82,.35) var(--paper)}
+::selection{background:var(--blue);color:var(--white)}
+:focus-visible{outline:.3rem solid var(--blue);outline-offset:.3rem;border-radius:inherit}
+.give :focus-visible,.callout :focus-visible,.box.price :focus-visible,.apply-l :focus-visible,.booster-card.c4 :focus-visible,.hero-shape :focus-visible,footer :focus-visible,.floating-banner:focus-visible,.cs-info .b2 :focus-visible,.reward.b :focus-visible,.cs-info .b3 :focus-visible{outline-color:var(--white)}
+.custom-input:focus-visible,.seg input:focus-visible+label{outline:0}
+.seg input:focus-visible+label{box-shadow:0 0 0 .3rem var(--blue)}
+.custom-input:focus-visible{outline:0}
+input[type=range]:focus-visible{outline:0}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 .5rem rgba(47,91,255,.25)}
+input[type=range]:focus-visible::-moz-range-thumb{box-shadow:0 0 0 .5rem rgba(47,91,255,.25)}
+.booster-card:focus-visible{outline-offset:-.3rem}
+h1,h2,h3,.title,.tit,.big{text-wrap:balance}
+p,.lead,.desc,.verdict{text-wrap:pretty}
+.btn-round:active,.btn-pill:active,.pill:active,.btn.point:active,.pro-link:active,.banner-contents .btn:active,.floating-banner:active{transform:scale(.97)}
+.btn-pill,.btn-round,.pill,.btn.point,.pro-link,.banner-contents .btn,.floating-banner{transition-property:opacity,background-color,border-color,color,transform;transition-duration:.2s;transition-timing-function:cubic-bezier(.22,1,.36,1)}
+.btn-round,.btn-pill,.faq-q{touch-action:manipulation}
+.faq-q{padding:.6rem 0;border-radius:.8rem}
+.faq-q:hover{color:var(--blue)}
+.tab-list button{border-radius:.4rem}
+.tab-list button:hover{color:var(--navy)}
+.floating-banner:not(.show){visibility:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),visibility 0s .5s}
+.custom-input:hover{border-color:var(--line)}
+.seg label:hover{background:var(--tint)}
+.seg input:checked+label:hover{background:var(--navy)}
+.btn.point:disabled{opacity:.5;cursor:default}
+@media (hover:none){.pill:hover,.banner-contents .btn:hover,.btn.point:hover,.floating-banner:hover{opacity:1}.lcard:hover{transform:none;border-color:var(--line)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}.floating-banner:not(.show){transition:none}}
 
 /* ───── responsive ───── */
 @media (max-width:1280px){
@@ -471,7 +496,7 @@ main{padding-bottom:2.4rem}
   .reward{padding:3.2rem;min-height:0}.reward .ex div{flex-wrap:wrap;gap:.6rem}.reward h3{font-size:2.2rem}.reward .big{font-size:11rem}
   .cs-info .b3{grid-column:auto}
   .box.price{padding:3.2rem;min-height:0}.box.price .pro-head .h{font-size:3.8rem}
-  .box.list,.box.calc,.apply-l,.apply-r{padding:3.2rem}
+  .box.cmp,.box.calc,.apply-l,.apply-r{padding:3.2rem}
   .cmp-r .r{font-size:1.8rem;padding-left:6.2rem}
   .apply-l{min-height:0}.apply-l h3{font-size:3.6rem}
   .apply-l .priceline{flex-direction:column;align-items:flex-start;margin-top:3.2rem}.apply-l .priceline b{font-size:6.4rem}
@@ -666,7 +691,7 @@ main{padding-bottom:2.4rem}
 
 <!-- ⑤ 리워드 -->
 <section id="s-reward">
-  <div class="title-wrap reveal"><div><h2 class="title">사도 3%, <strong>추천해도 3%</strong></h2><p class="lead">싸게 사는 데서 끝나지 않아요. 쓴 만큼 돌려받고, 추천한 만큼 쌓이고, 그 일부는 아이들에게 갑니다.</p></div></div>
+  <div class="title-wrap reveal"><div><h2 class="title">사도 3%, <strong>추천해도 3%</strong></h2><p class="lead">쓴 만큼 돌려받고, 추천한 만큼 쌓이고, 그 일부는 아이들에게 갑니다.</p></div></div>
   <div class="reward-grid">
     <div class="reward reveal">
       <p class="k">혜택 01 · 내가 살 때</p>
@@ -681,18 +706,18 @@ main{padding-bottom:2.4rem}
       <div class="ex"><div><span>지인 3,111,000원 구매</span><b>93,330원 페이백</b></div></div>
     </div>
   </div>
-  <div class="strip reveal">추천코드 리워드는 기간 제한 없이 이어집니다<i></i><span>환급·페이백은 정산으로 지급됩니다</span></div>
   <div class="give reveal">
     <div><p class="k">혜택 03 · 함께 나누면</p><p class="t">수익의 일정 비율은<br><strong>푸른별 어린이재단</strong>에 기부됩니다</p></div>
     <p class="sm">내가 쓰고 추천한 만큼,<br>아이들에게도 닿습니다.</p>
   </div>
+  <p class="note">추천코드 리워드는 기간 제한 없이 이어지며, 환급·페이백은 정산으로 지급됩니다.</p>
 </section>
 
 <!-- ⑥ 10 → 15 -->
 <section id="s-compare">
   <div class="title-wrap reveal"><div><h2 class="title">이 모든 혜택, <strong>월 5만원이면 됩니다</strong></h2><p class="lead">기존 헬로벨렌탈 월 10만원에 PRO 월 5만원을 더하면 월 15만원(VAT 별도). 복지몰에서 하나만 사도 그 5만원은 돌아옵니다.</p></div></div>
-  <div class="compare-grid">
-    <div class="box price reveal">
+  <div class="compare-grid reveal">
+    <div class="box price">
       <p class="lb">헬로벨렌탈 PRO</p>
       <div class="pro-head">
         <p class="h">기존 그대로,<br><strong>월 5만원</strong>만 더하면</p>
@@ -700,14 +725,14 @@ main{padding-bottom:2.4rem}
       </div>
       <ul class="pro-tags"><li>오픈엑스 복지몰 이용</li><li>정품 특가</li><li>구매 3% 환급</li><li>추천 3% 페이백</li><li>어린이재단 기부</li></ul>
     </div>
-    <div class="box list reveal">
+    <div class="box cmp">
       <div class="cmp-h"><div class="l">지금 받는 것 · 월 10만원</div><div class="r">PRO로 더 받는 것 · +5만원</div></div>
       <div class="cmp-r"><div class="l">최고 수준의 렌탈 수수료</div><div class="r">오픈엑스 복지몰 이용<small>임직원 가격 월 1대 (1년 기준)</small></div></div>
       <div class="cmp-r"><div class="l">독립 홈페이지 제공</div><div class="r">복지몰 정품 특가</div></div>
       <div class="cmp-r"><div class="l">고객센터 100% 본사 지원</div><div class="r">내 구매 3% 환급</div></div>
       <div class="cmp-r"><div class="l">상담 대행 · 마케팅 지원</div><div class="r">지인 구매 3% 페이백</div></div>
       <div class="cmp-r"><div class="l">4만 가지 제품 · 16개 브랜드</div><div class="r">수익 일부 어린이재단 기부</div></div>
-      <div class="sum"><span class="g">월 5만원, 하나만 사도 본전</span></div>
+      <p class="sum">월 5만원, 하나만 사도 <strong>본전</strong></p>
     </div>
   </div>
   <div class="box calc reveal">
@@ -861,7 +886,7 @@ function activate(i){
   $('#bprev').disabled = i === 0; $('#bnext').disabled = i === cards.length - 1;
   bl.dataset.i = i;
 }
-cards.forEach((c, i) => { c.addEventListener('mouseenter', () => { if(matchMedia('(hover:hover)').matches && innerWidth > 900) activate(i); }); c.addEventListener('click', () => activate(i)); });
+cards.forEach((c, i) => { c.tabIndex = 0; c.setAttribute('role', 'button'); c.addEventListener('focus', () => activate(i)); c.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); activate(i); } }); c.addEventListener('mouseenter', () => { if(matchMedia('(hover:hover)').matches && innerWidth > 900) activate(i); }); c.addEventListener('click', () => activate(i)); });
 $('#bprev').onclick = () => activate(Math.max(0, +bl.dataset.i - 1));
 $('#bnext').onclick = () => activate(Math.min(cards.length - 1, +bl.dataset.i + 1));
 activate(0);
@@ -961,7 +986,7 @@ const FAQ = [
   ['해지하면 환불이 되나요?', '해지·환불 기준은 이용 약관에 따릅니다. 상담 시 자세히 안내해 드립니다.']
 ];
 $('#faq').innerHTML = FAQ.map(([q, a]) => `<li class="faq-i"><button class="faq-q" type="button">${q}</button><p class="faq-a">${a}</p></li>`).join('');
-$$('.faq-i').forEach(li => li.querySelector('.faq-q').onclick = () => li.classList.toggle('open'));
+$$('.faq-i').forEach(li => { const q = li.querySelector('.faq-q'); q.setAttribute('aria-expanded', 'false'); q.onclick = () => q.setAttribute('aria-expanded', li.classList.toggle('open')); });
 const tabs = $$('.tab-list button'), bar = $('#tbar');
 function placeBar(){ const a = tabs.find(t => t.getAttribute('aria-selected') === 'true'); bar.style.left = a.offsetLeft + 'px'; bar.style.width = a.offsetWidth + 'px'; }
 tabs.forEach(t => t.onclick = () => { tabs.forEach(x => x.setAttribute('aria-selected', x === t)); $$('.tab-panel').forEach(p => p.classList.toggle('active', p.id === t.dataset.p)); placeBar(); });
