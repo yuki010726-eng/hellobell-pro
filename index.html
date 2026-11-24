@@ -547,21 +547,22 @@ p,.lead,.desc,.verdict{text-wrap:pretty}
   .banner-contents .btn svg{width:1.8rem;height:1.8rem}
   .hero-shape .art{--k:.5;bottom:3.2rem}
 
-  /* 기존 헬로벨 아코디언 */
-  .booster-list{gap:1rem}
-  .booster-card{border-radius:2.4rem;min-width:0}
-  .booster-card>article,.booster-card[data-active='true']>article{padding:2.4rem 2.2rem}
-  .booster-card[data-active='false']>article{flex-direction:row;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap}
-  .booster-card[data-active='false'] .no{width:100%}
-  .booster-card[data-active='false'] .title{margin-top:0;flex:1}
-  .booster-card[data-active='false'] .t-short{font-size:1.8rem;white-space:normal}
-  .booster-card[data-active='false'] .t-short br{display:none}
-  .booster-card[data-active='false'] .more{margin-top:0;flex:none}
-  .booster-card .t-long{font-size:2.2rem;max-width:none}
-  .booster-card .lead{font-size:1.4rem}
-  .mini{padding:1.4rem 1.6rem;font-size:1.5rem;border-radius:1.6rem}
-  .stat-row{gap:.8rem}.stat{padding:1.6rem 1.2rem;border-radius:1.6rem}.stat b{font-size:2.8rem}.stat span{font-size:1.3rem}
-  .pro-list li{font-size:1.5rem}
+  /* 기존 헬로벨: 폰에서는 접지 않고 4장을 모두 펼쳐서 보여줌 */
+  #s-existing .title-wrap .btn-wrap{display:none}
+  .booster-list{gap:1.2rem}
+  .booster-card{border-radius:2.4rem;min-width:0;cursor:default}
+  .booster-card>article,.booster-card[data-active]>article{padding:2.8rem 2.4rem}
+  .booster-card .badge,.booster-card .more,.booster-card .t-short,.booster-card[data-active] .t-short{display:none}
+  .booster-card .t-long,.booster-card[data-active] .t-long{display:block;font-size:2.3rem;line-height:1.38;max-width:none}
+  .booster-card .body,.booster-card[data-active] .body{display:block;margin-top:2rem;animation:none}
+  .booster-card.c2,.booster-card.c3,.booster-card[data-active='false']:hover{background:var(--paper)}
+  .booster-card.c4,.booster-card.c4[data-active='false']:hover{background:var(--navy) url(assets/wave.jpg) center/cover}
+  .booster-card .no{font-size:1.4rem}
+  .mini-grid{gap:.8rem}
+  .mini{padding:1.5rem 1.6rem;font-size:1.6rem;border-radius:1.6rem}
+  .stat-row{gap:.8rem}.stat{padding:1.8rem 1.2rem;border-radius:1.6rem;text-align:center}.stat b{font-size:3rem}.stat span{font-size:1.4rem}
+  .stat-note{font-size:1.4rem;line-height:1.6}
+  .pro-list li{font-size:1.6rem}
 
   /* 복지몰 */
   .w-visual{height:32rem;border-radius:2.4rem}
@@ -628,17 +629,18 @@ p,.lead,.desc,.verdict{text-wrap:pretty}
   .box.price .op{font-size:2.4rem}
   .box.price .sumline b{font-size:6rem;letter-spacing:-.25rem}
   .box.price .sumline b span{font-size:2.6rem}
-  .box.cmp{padding:2rem 1.4rem}
-  .cmp-h,.cmp-r{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:.6rem}
-  .cmp-h{margin-bottom:.6rem}
-  .cmp-h div{padding:1.1rem .8rem;border-radius:1.2rem;font-size:1.25rem;line-height:1.35}
-  .cmp-h .r{font-size:1.3rem}
-  .cmp-r{margin-bottom:.6rem}
-  .cmp-r div{padding:1.3rem 1.2rem;border-radius:1.4rem;min-height:6.4rem}
-  .cmp-r .l{font-size:1.3rem}
-  .cmp-r .r{padding-left:1.2rem;font-size:1.5rem;letter-spacing:-.03rem}
-  .cmp-r .r::before{display:none}
-  .cmp-r .r small{font-size:1.2rem}
+  /* 비교표: 좁은 2열 대신 '지금 받는 것' 목록 → 'PRO로 더 받는 것' 목록 순서로 */
+  .box.cmp{padding:2.8rem 2.2rem;display:flex;flex-direction:column;justify-content:flex-start}
+  .cmp-h,.cmp-r{display:contents}
+  .cmp-h div{margin:0 0 1rem;padding:0;border-radius:0;background:none !important;text-align:left;font-size:1.7rem;font-weight:700;line-height:1.4}
+  .cmp-h .l{order:1;color:var(--navy)}
+  .cmp-h .r{order:3;margin-top:2.4rem;color:var(--blue);font-size:1.7rem}
+  .cmp-r div{min-height:0;border-radius:1.4rem;margin-bottom:.8rem}
+  .cmp-r .l{order:2;padding:1.4rem 1.8rem;font-size:1.55rem;color:var(--navy);font-weight:500}
+  .cmp-r .r{order:4;padding:1.6rem 1.8rem 1.6rem 5.4rem;font-size:1.65rem;letter-spacing:-.02rem}
+  .cmp-r .r::before{display:flex;left:1.6rem;width:2.6rem;height:2.6rem;font-size:1.8rem}
+  .cmp-r .r small{font-size:1.3rem;margin-top:.4rem}
+  .sum{order:5}
   .sum{margin-top:1.6rem;padding-top:1.6rem;font-size:1.7rem}
   .box.calc{margin-top:1rem;padding:2.8rem 2.2rem;gap:2.8rem;grid-template-columns:minmax(0,1fr)}
   .calc h3{font-size:2.2rem}
@@ -692,6 +694,34 @@ p,.lead,.desc,.verdict{text-wrap:pretty}
   .apply-r h4{font-size:2rem;margin-bottom:2.4rem}
   .custom-input,.seg label{height:5rem;font-size:1.6rem}
   .btn.point{height:5.6rem;font-size:1.8rem}
+
+  /* 가독성: 회색 글씨 진하게, 최소 글자 크기·줄간격 올림 */
+  :root{--mute:rgba(7,26,82,.8);--mute2:rgba(7,26,82,.68)}
+  body{line-height:1.6}
+  .title-wrap .title{font-size:2.7rem}
+  .title-wrap .lead{font-size:1.6rem;line-height:1.65}
+  .w-list .desc,.reward h3+.ex div,.calc .sub,.verdict,.list .value,.step-list span{font-size:1.5rem;line-height:1.6}
+  .w-list .tit{font-size:2rem}
+  .prod-tit-wrap .desc{font-size:1.45rem;line-height:1.5}
+  .product-detail .value .sub{font-size:1.3rem}
+  .product-detail .sup span{font-size:1.3rem}
+  .note{font-size:1.35rem;line-height:1.65}
+  .reward h3{font-size:2.1rem;line-height:1.45}
+  .reward .ex div{font-size:1.5rem}
+  .res div{font-size:1.5rem}
+  .res span small{font-size:1.3rem;line-height:1.5}
+  .scale{font-size:1.3rem}
+  .eg small{font-size:1.4rem;line-height:1.5}
+  .eg span{font-size:1.45rem}
+  .cs-info .b2 li{font-size:1.6rem}
+  .list .key{font-size:1.55rem}
+  .faq-q{font-size:1.6rem;line-height:1.5}
+  .faq-a{font-size:1.5rem}
+  .apply-l .perks li{font-size:1.6rem}
+  .fld>label,.fld>.lb{font-size:1.5rem}
+  .agree{font-size:1.4rem}
+  .lcard .st{font-size:1.3rem}
+  footer .f-notes{font-size:1.3rem;color:rgba(255,255,255,.75)}
 
   /* 하단 고정 신청 버튼: 폰에서는 화면 폭 바 */
   .floating-banner{left:1.6rem;right:1.6rem;bottom:calc(1.2rem + env(safe-area-inset-bottom));height:5.4rem;justify-content:center;font-size:1.6rem;padding:0 2rem;background:var(--blue);box-shadow:0 .8rem 2.4rem rgba(7,26,82,.25)}
